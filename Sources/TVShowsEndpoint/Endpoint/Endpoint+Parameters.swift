@@ -5,10 +5,8 @@
 //  Created by iMacPro on 22.11.2021..
 //
 
-import Alamofire
-
 public extension Endpoint {
-  var parameters: Parameters {
+  var parameters: [String: Any]  {
     switch self {
       
 // MARK: - User -

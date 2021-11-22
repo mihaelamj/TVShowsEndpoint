@@ -43,15 +43,4 @@ extension UserAuthData: Comparable {
   }
 }
 
-// MARK: - Helper -
 
-public extension UserAuthData {
-  static func saveToRepositoryFrom(urlResponse: HTTPURLResponse?) {
-    guard let me = UserAuthData.from(urlResponse: urlResponse) else { return }
-    me.saveToRepository()
-  }
-  
-  static func deleteFromRepository() {
-    UserAuthData.none().deleteFromRepository()
-  }
-}
