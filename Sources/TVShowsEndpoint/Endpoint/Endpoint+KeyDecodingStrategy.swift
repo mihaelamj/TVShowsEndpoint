@@ -43,3 +43,15 @@ public extension Endpoint {
     }
   }
 }
+
+public extension Endpoint {
+  
+  // INFO: Maybe make this more generic to accept non-JSON decoders, like Text, XML, or CSV -
+  
+  static func makeDecoder(decodingStrategy: JSONDecoder.KeyDecodingStrategy) -> JSONDecoder {
+    let result = JSONDecoder()
+    result.keyDecodingStrategy = decodingStrategy
+    return result
+  }
+  
+}
