@@ -2,10 +2,11 @@ import XCTest
 @testable import TVShowsEndpoint
 
 final class TVShowsEndpointTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-//        XCTAssertEqual(TVShowsEndpoint().text, "Hello, World!")
-    }
+  
+  func testLoginPath() {
+    let path = TVShowsEndpoint.Endpoint.login(email: "", password: "").fullPath
+    let realPath = "https://tv-shows.infinum.academy/users"
+    XCTAssertEqual(path, realPath)
+  }
+  
 }
