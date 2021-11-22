@@ -5,7 +5,6 @@
 //  Created by iMacPro on 22.11.2021..
 //
 
-
 import Alamofire
 
 public extension Endpoint {
