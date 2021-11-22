@@ -5,8 +5,6 @@
 //  Created by iMacPro on 22.11.2021..
 //
 
-import Foundation
-
 extension Endpoint: RawRepresentable {
   
   public typealias RawValue = Int
