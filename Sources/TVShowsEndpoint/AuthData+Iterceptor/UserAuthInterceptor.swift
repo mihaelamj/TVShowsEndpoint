@@ -1,7 +1,7 @@
 //
 //  UserAuthInterceptor.swift
 //
-//  Created by iMacPro on 22.11.2021..
+//  Created by iMacPro on 17.11.2021..
 //
 
 import Foundation
