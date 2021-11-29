@@ -34,7 +34,7 @@ public struct UserAuthData: Codable {
 
 extension UserAuthData: CustomStringConvertible {
   public var description: String {
-    return "🔐: \(uid): (accessToken), [\(client)]"
+    return "🔐:UID \(uid): AC: \(accessToken), Cli:[\(client)]"
   }
 }
 
