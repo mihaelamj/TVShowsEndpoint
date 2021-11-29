@@ -11,6 +11,8 @@ import Foundation
 public struct UserAuthData: Codable {
   let repository = UserDefaults.standard
   
+  public var userAuthUID: String { return uid }
+  
   var accessToken: String
   var client: String
   var expiry: String
@@ -32,7 +34,7 @@ public struct UserAuthData: Codable {
 
 extension UserAuthData: CustomStringConvertible {
   public var description: String {
-    return "🔐: \(accessToken), [\(client)]"
+    return "🔐: \(uid): (accessToken), [\(client)]"
   }
 }
 
