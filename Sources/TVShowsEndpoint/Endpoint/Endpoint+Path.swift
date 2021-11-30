@@ -34,9 +34,9 @@ public extension Endpoint {
     case .createReview:
       return "/reviews"
     case .deleteReview(reviewId: let reviewId):
-      return "/reviews\(reviewId)"
+      return "/reviews/\(reviewId)"
     case .updateReview(reviewId: let reviewId):
-      return "/reviews\(reviewId)"
+      return "/reviews/\(reviewId)"
     case .reviews(showId: let showId):
       return "/shows/\(showId)/reviews"
     }
