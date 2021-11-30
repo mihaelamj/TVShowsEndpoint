@@ -18,7 +18,7 @@ public extension Endpoint {
     case .login:
       return nil
     case .updateUserImage:
-      return nil
+      return UserAuthInterceptor()
     case .me:
       return nil
 
