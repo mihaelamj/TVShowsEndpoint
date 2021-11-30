@@ -9,4 +9,13 @@ final class TVShowsEndpointTests: XCTestCase {
     XCTAssertEqual(path, realPath)
   }
   
+  func testAllPaths() {
+    for endpoint in Endpoint.allCases {
+      let fullPath = endpoint.fullPath
+      debugPrint("Testing: \(fullPath)")
+      let url = URL(string: fullPath)
+      XCTAssertNotNil(url)
+    }
+  }
+  
 }
