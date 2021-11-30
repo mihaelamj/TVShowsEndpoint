@@ -12,24 +12,29 @@ final class TestParams: XCTestCase {
   
   typealias Params = [String : AnyHashable]
   
-  static let testEmail = "test@test.com"
-  static let testPassword = "testtest"
-  static let testRating = 3
-  static let testShowId = 8
-  static let testComment = "comment"
-  
   static var allParams: [Params] = [
-    ["email": testEmail, "password": testPassword, "password_confirmation": testPassword],
-    ["email": testEmail, "password": testPassword],
-    ["email": testEmail],
+    ["email": "", "password": "", "password_confirmation": ""],
+    ["email": "", "password": ""],
+    ["email": ""],
     [:],
     [:],
     [:],
     [:],
-    ["rating": testRating, "comment": testComment, "show_id" : testShowId],
+    ["rating": 0, "comment": "", "show_id" : 0],
     [:],
-    [:],
+    ["rating": 0, "comment": ""],
     [:]
   ]
+  
+  func testAllParams() {
+    var index = 0
+    for endpoint in Endpoint.allCases {
+      let params = endpoint.parameters
+      let constParam = TestParams.allParams[index]
+      debugPrint("Testing: \(params)")
+      index += 1
+      
+    }
+  }
   
 }

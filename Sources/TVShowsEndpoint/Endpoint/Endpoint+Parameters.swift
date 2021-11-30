@@ -35,8 +35,8 @@ public extension Endpoint {
       return ["rating": rating, "comment": comment, "show_id" : showId]
     case .deleteReview:
       return [:]
-    case .updateReview:
-      return [:]
+    case .updateReview(reviewId: _, rating: let rating, comment: let comment):
+      return ["rating": rating, "comment": comment]
     case .reviews:
       return [:]
     }

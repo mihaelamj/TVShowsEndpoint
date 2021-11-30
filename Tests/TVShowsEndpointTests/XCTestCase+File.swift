@@ -24,6 +24,3 @@ extension XCTestCase {
     return true
   }
 }
-
-
-// https://tv-shows.infinum.academy/shows/{show_id}/reviews
